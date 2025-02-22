@@ -24,3 +24,8 @@ server.listen(8080, () => {
 
 const MONGO_URL = 'mongodb+srv://rmcguine:bpbhXJuBAu1C6szU@cluster0.2wqup.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
+mongoose.Promise = Promise;
+mongoose.connect(MONGO_URL);
+mongoose.connection.on('error', (error: Error) => console.log(error));
+
+
