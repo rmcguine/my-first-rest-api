@@ -21,7 +21,7 @@ export const getUserByEmail = (email: string) => UserModel.findOne({ email });
 
 // confirm whether user is logged in or not
 export const getUserBySessionToken = (sessionToken: string) => UserModel.findOne({ 
-    'authentication.sessionToke': sessionToken,
+    'authentication.sessionToken': sessionToken,
  });
 
 export const getUserById = (id: string) => UserModel.findById(id);
